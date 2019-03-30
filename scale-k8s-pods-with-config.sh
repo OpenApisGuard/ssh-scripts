@@ -2,7 +2,7 @@
 #!/bin/bash
 if [ $# -ne 1 ]
   then
-  	echo "Scale Kubenetes service pods in a specific namespace based on the config-file (csv format using first column as name of service and second column as number of pods separated by space)"
+    echo "Scale Kubenetes service pods in a specific namespace based on the config-file (csv format using first column as name of service and second column as number of pods separated by space)"
     echo "Usage: scale-k8s-pods-with-config.sh [namespace] < [config-file]"
     echo "Example: scale-k8s-pods-with-config.sh my-namespace < services.csv"
     echo "config-file: (csv file with two columns using space as delimiter): <service-name> <num-of-pods>"

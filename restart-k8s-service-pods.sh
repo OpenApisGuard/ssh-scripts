@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ $# -ne 2 ]
   then
-  	echo "Capturing Kubenetes service pods log files and restarting all service pods in a specific namespace"
+    echo "Capturing Kubenetes service pods log files and restarting all service pods in a specific namespace"
     echo "Usage: restart-k8s-service-pods.sh [namespace] [service-label]"
     echo "Example: restart-k8s-service-pods.sh my-namespace my-service"
     exit

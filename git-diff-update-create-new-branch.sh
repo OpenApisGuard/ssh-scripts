@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ $# -ne 4 ]
   then
-  	echo "Diff file-to-diff from from-branch to to-branch then apply diff to new-pr-branch"
+    echo "Diff file-to-diff from from-branch to to-branch then apply diff to new-pr-branch"
     echo "Usage: git-diff-update-create-new-branch.sh [from-branch] [to-branch] [new-pr-branch] [file-to-diff]"
     echo "Example: git-diff-update-create-new-branch.sh develop master pr/master version"
     exit
