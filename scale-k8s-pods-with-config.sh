@@ -12,10 +12,11 @@ fi
 
 echo "Start scaling..."
 
-while IFS= read -r service || [[ -n "$service" ]];
+while IFS= read -r line || [[ -n "$line" ]];
 do
-	cmd=$(echo $service | awk '{print "kubectl scale --replicas="$2" deployment/"$1" -n"}')
-	numOfpods=$(echo $service | awk '{print $2}')
+	cmd=$(echo "$line" | awk '{print "kubectl scale --replicas="$2" deployment/"$1" -n"}')
+	numOfpods=$(echo "$line" | awk '{print $2}')
+
 	scale=$($cmd $1)
 	echo $scale " to " $numOfpods
 done
